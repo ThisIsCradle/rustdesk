@@ -3669,14 +3669,17 @@ Widget loadPowered(BuildContext context) {
               )),
         ),
       ).marginOnly(top: 6),
-      Text(
-        // translate("powered_by_me"),
-        'на основе RustDesk',
-        overflow: TextOverflow.clip,
-        style: Theme.of(context)
-            .textTheme
-            .bodySmall
-            ?.copyWith(fontSize: 9, decoration: TextDecoration.underline),
+      Opacity(
+        opacity: 0.5,
+        child: Text(
+          // translate("powered_by_me"),
+          'на основе RustDesk',
+          overflow: TextOverflow.clip,
+          style: Theme.of(context)
+              .textTheme
+              .bodySmall
+              ?.copyWith(fontSize: 9, decoration: TextDecoration.none),
+        ),
       )
     ],
   );
